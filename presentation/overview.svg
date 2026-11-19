@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="0.5" stop-color="#a855f7"/>
+      <stop offset="1" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="500" fill="url(#bg2)"/>
+  <rect x="0" y="0" width="900" height="4" fill="url(#accent)"/>
+
+  <text x="450" y="100" fill="#64748b" font-size="14" letter-spacing="6" text-anchor="middle">PROJECT OVERVIEW</text>
+
+  <text x="450" y="175" fill="#f1f5f9" font-size="56" font-weight="bold" text-anchor="middle">PyDB</text>
+  <text x="450" y="212" fill="#a5b4fc" font-size="18" text-anchor="middle" font-style="italic">
+    a relational database, from scratch
+  </text>
+
+  <line x1="300" y1="245" x2="600" y2="245" stroke="url(#accent)" stroke-width="2"/>
+
+  <text x="450" y="295" fill="#cbd5e1" font-size="16" text-anchor="middle">
+    A working SQL database engine that stores, indexes, and retrieves
+  </text>
+  <text x="450" y="320" fill="#cbd5e1" font-size="16" text-anchor="middle">
+    structured data — built entirely in pure Python.
+  </text>
+
+  <!-- Three badges -->
+  <rect x="80"  y="370" width="220" height="80" rx="12" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="190" y="402" fill="#60a5fa" font-size="22" font-weight="bold" text-anchor="middle">2,500</text>
+  <text x="190" y="425" fill="#94a3b8" font-size="13" text-anchor="middle">lines of Python</text>
+
+  <rect x="340" y="370" width="220" height="80" rx="12" fill="#1e293b" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="450" y="402" fill="#c084fc" font-size="22" font-weight="bold" text-anchor="middle">0</text>
+  <text x="450" y="425" fill="#94a3b8" font-size="13" text-anchor="middle">external dependencies</text>
+
+  <rect x="600" y="370" width="220" height="80" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+  <text x="710" y="402" fill="#34d399" font-size="22" font-weight="bold" text-anchor="middle">4 KB</text>
+  <text x="710" y="425" fill="#94a3b8" font-size="13" text-anchor="middle">disk page size</text>
+
+  <text x="450" y="480" fill="#475569" font-size="12" text-anchor="middle">
+    Not a wrapper around SQLite or Postgres — every byte of storage and every SQL step is implemented here.
+  </text>
+</svg>

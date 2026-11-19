@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="720" fill="url(#bg4)"/>
+
+  <text x="500" y="48" fill="#f1f5f9" font-size="26" font-weight="bold" text-anchor="middle">
+    What PyDB Can Do
+  </text>
+  <text x="500" y="75" fill="#94a3b8" font-size="14" text-anchor="middle">
+    Feature checklist — what's working today
+  </text>
+
+  <!-- Row 1 — DDL -->
+  <rect x="40" y="110" width="300" height="130" rx="12" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5" filter="url(#cardShadow)"/>
+  <text x="60" y="145" fill="#60a5fa" font-size="12" font-weight="bold" letter-spacing="2">DDL</text>
+  <text x="60" y="175" fill="#f1f5f9" font-size="17" font-weight="bold">Schema definition</text>
+  <text x="60" y="200" fill="#cbd5e1" font-size="12">• CREATE TABLE with typed columns</text>
+  <text x="60" y="220" fill="#cbd5e1" font-size="12">• PRIMARY KEY · NOT NULL</text>
+
+  <rect x="355" y="110" width="300" height="130" rx="12" fill="#1e293b" stroke="#a855f7" stroke-width="1.5" filter="url(#cardShadow)"/>
+  <text x="375" y="145" fill="#c084fc" font-size="12" font-weight="bold" letter-spacing="2">DML</text>
+  <text x="375" y="175" fill="#f1f5f9" font-size="17" font-weight="bold">Data manipulation</text>
+  <text x="375" y="200" fill="#cbd5e1" font-size="12">• Multi-row INSERT</text>
+  <text x="375" y="220" fill="#cbd5e1" font-size="12">• UPDATE · DELETE with WHERE</text>
+
+  <rect x="670" y="110" width="290" height="130" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="1.5" filter="url(#cardShadow)"/>
+  <text x="690" y="145" fill="#34d399" font-size="12" font-weight="bold" letter-spacing="2">QUERY</text>
+  <text x="690" y="175" fill="#f1f5f9" font-size="17" font-weight="bold">Full SELECT pipeline</text>
+  <text x="690" y="200" fill="#cbd5e1" font-size="12">• WHERE with AND / OR / NOT</text>
+  <text x="690" y="220" fill="#cbd5e1" font-size="12">• ORDER BY · LIMIT · OFFSET</text>
+
+  <!-- Row 2 -->
+  <rect x="40" y="260" width="300" height="130" rx="12" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" filter="url(#cardShadow)"/>
+  <text x="60" y="295" fill="#fbbf24" font-size="12" font-weight="bold" letter-spacing="2">TYPES</text>
+  <text x="60" y="325" fill="#f1f5f9" font-size="17" font-weight="bold">Strict type system</text>
+  <text x="60" y="350" fill="#cbd5e1" font-size="12">• INTEGER · REAL · TEXT · BOOLEAN</text>
+  <text x="60" y="370" fill="#cbd5e1" font-size="12">• Automatic coercion + rejection</text>
+
+  <rect x="355" y="260" width="300" height="130" rx="12" fill="#1e293b" stroke="#ef4444" stroke-width="1.5" filter="url(#cardShadow)"/>
+  <text x="375" y="295" fill="#f87171" font-size="12" font-weight="bold" letter-spacing="2">INTEGRITY</text>
+  <text x="375" y="325" fill="#f1f5f9" font-size="17" font-weight="bold">Constraints</text>
+  <text x="375" y="350" fill="#cbd5e1" font-size="12">• Primary key uniqueness</text>
+  <text x="375" y="370" fill="#cbd5e1" font-size="12">• NOT NULL enforcement</text>
+
+  <rect x="670" y="260" width="290" height="130" rx="12" fill="#1e293b" stroke="#06b6d4" stroke-width="1.5" filter="url(#cardShadow)"/>
+  <text x="690" y="295" fill="#22d3ee" font-size="12" font-weight="bold" letter-spacing="2">STORAGE</text>
+  <text x="690" y="325" fill="#f1f5f9" font-size="17" font-weight="bold">Real disk pages</text>
+  <text x="690" y="350" fill="#cbd5e1" font-size="12">• 4 KB slotted pages</text>
+  <text x="690" y="370" fill="#cbd5e1" font-size="12">• LRU page cache · row encoding</text>
+
+  <!-- Row 3 — persistent -->
+  <rect x="40" y="410" width="470" height="120" rx="12" fill="#1e293b" stroke="#8b5cf6" stroke-width="1.5" filter="url(#cardShadow)"/>
+  <text x="60" y="445" fill="#a78bfa" font-size="12" font-weight="bold" letter-spacing="2">PERSISTENCE</text>
+  <text x="60" y="475" fill="#f1f5f9" font-size="17" font-weight="bold">Data survives restarts</text>
+  <text x="60" y="500" fill="#cbd5e1" font-size="12">Close the database, reopen it — every row is still there.</text>
+  <text x="60" y="520" fill="#cbd5e1" font-size="12">Storage is bytes on disk, not objects in memory.</text>
+
+  <rect x="525" y="410" width="435" height="120" rx="12" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5" filter="url(#cardShadow)"/>
+  <text x="545" y="445" fill="#fb7185" font-size="12" font-weight="bold" letter-spacing="2">RELIABILITY</text>
+  <text x="545" y="475" fill="#f1f5f9" font-size="17" font-weight="bold">Errors you can read</text>
+  <text x="545" y="500" fill="#cbd5e1" font-size="12">Every failure names the table, the column,</text>
+  <text x="545" y="520" fill="#cbd5e1" font-size="12">and the reason — no cryptic tracebacks.</text>
+
+  <!-- Bottom note -->
+  <rect x="40" y="555" width="920" height="130" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1" stroke-dasharray="5 4"/>
+  <text x="60" y="588" fill="#fbbf24" font-size="13" font-weight="bold" letter-spacing="2">NOT YET (ROADMAP)</text>
+  <text x="60" y="618" fill="#94a3b8" font-size="13">JOIN  ·  GROUP BY  ·  SUM / COUNT / AVG  ·  indexes  ·  foreign keys</text>
+  <text x="60" y="642" fill="#94a3b8" font-size="13">transactions (BEGIN / COMMIT / ROLLBACK)  ·  write-ahead log  ·  auto-increment</text>
+  <text x="60" y="670" fill="#64748b" font-size="12" font-style="italic">
+    These are the honest next features — not hidden gaps. A small, complete database beats a large, broken one.
+  </text>
+</svg>

@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="tblShadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="720" fill="url(#bg5)"/>
+
+  <text x="500" y="42" fill="#f1f5f9" font-size="22" font-weight="bold" text-anchor="middle">
+    E-commerce schema — 6 tables, 8 relations
+  </text>
+
+  <!-- helper: table card shape drawn manually -->
+
+  <!-- categories -->
+  <rect x="60" y="90" width="200" height="110" rx="10" fill="#1e293b" stroke="#3b82f6" stroke-width="2" filter="url(#tblShadow)"/>
+  <rect x="60" y="90" width="200" height="30" rx="10" fill="#3b82f6"/>
+  <rect x="60" y="110" width="200" height="10" fill="#3b82f6"/>
+  <text x="160" y="111" fill="white" font-size="14" font-weight="bold" text-anchor="middle">categories</text>
+  <text x="76" y="143" fill="#fbbf24" font-size="12">id</text>
+  <text x="180" y="143" fill="#94a3b8" font-size="10">PK</text>
+  <text x="76" y="165" fill="#cbd5e1" font-size="12">name</text>
+  <text x="76" y="185" fill="#cbd5e1" font-size="12">description</text>
+
+  <!-- products -->
+  <rect x="400" y="90" width="220" height="135" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="2" filter="url(#tblShadow)"/>
+  <rect x="400" y="90" width="220" height="30" rx="10" fill="#10b981"/>
+  <rect x="400" y="110" width="220" height="10" fill="#10b981"/>
+  <text x="510" y="111" fill="white" font-size="14" font-weight="bold" text-anchor="middle">products</text>
+  <text x="416" y="143" fill="#fbbf24" font-size="12">id</text>
+  <text x="600" y="143" fill="#94a3b8" font-size="10">PK</text>
+  <text x="416" y="163" fill="#f87171" font-size="12">category_id</text>
+  <text x="585" y="163" fill="#94a3b8" font-size="10">FK</text>
+  <text x="416" y="183" fill="#cbd5e1" font-size="12">name · price · stock</text>
+  <text x="416" y="203" fill="#cbd5e1" font-size="12">active</text>
+
+  <!-- customers -->
+  <rect x="60" y="300" width="200" height="130" rx="10" fill="#1e293b" stroke="#a855f7" stroke-width="2" filter="url(#tblShadow)"/>
+  <rect x="60" y="300" width="200" height="30" rx="10" fill="#a855f7"/>
+  <rect x="60" y="320" width="200" height="10" fill="#a855f7"/>
+  <text x="160" y="321" fill="white" font-size="14" font-weight="bold" text-anchor="middle">customers</text>
+  <text x="76" y="353" fill="#fbbf24" font-size="12">id</text>
+  <text x="180" y="353" fill="#94a3b8" font-size="10">PK</text>
+  <text x="76" y="375" fill="#cbd5e1" font-size="12">name · email</text>
+  <text x="76" y="395" fill="#cbd5e1" font-size="12">city · created_at</text>
+
+  <!-- orders -->
+  <rect x="400" y="300" width="220" height="130" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="2" filter="url(#tblShadow)"/>
+  <rect x="400" y="300" width="220" height="30" rx="10" fill="#f59e0b"/>
+  <rect x="400" y="320" width="220" height="10" fill="#f59e0b"/>
+  <text x="510" y="321" fill="white" font-size="14" font-weight="bold" text-anchor="middle">orders</text>
+  <text x="416" y="353" fill="#fbbf24" font-size="12">id</text>
+  <text x="600" y="353" fill="#94a3b8" font-size="10">PK</text>
+  <text x="416" y="373" fill="#f87171" font-size="12">customer_id</text>
+  <text x="585" y="373" fill="#94a3b8" font-size="10">FK</text>
+  <text x="416" y="393" fill="#cbd5e1" font-size="12">status · total</text>
+  <text x="416" y="413" fill="#cbd5e1" font-size="12">created_at</text>
+
+  <!-- order_items -->
+  <rect x="740" y="300" width="220" height="130" rx="10" fill="#1e293b" stroke="#06b6d4" stroke-width="2" filter="url(#tblShadow)"/>
+  <rect x="740" y="300" width="220" height="30" rx="10" fill="#06b6d4"/>
+  <rect x="740" y="320" width="220" height="10" fill="#06b6d4"/>
+  <text x="850" y="321" fill="white" font-size="14" font-weight="bold" text-anchor="middle">order_items</text>
+  <text x="756" y="353" fill="#fbbf24" font-size="12">id</text>
+  <text x="940" y="353" fill="#94a3b8" font-size="10">PK</text>
+  <text x="756" y="373" fill="#f87171" font-size="12">order_id · product_id</text>
+  <text x="756" y="393" fill="#cbd5e1" font-size="12">quantity</text>
+  <text x="756" y="413" fill="#cbd5e1" font-size="12">unit_price</text>
+
+  <!-- reviews -->
+  <rect x="400" y="540" width="220" height="120" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="2" filter="url(#tblShadow)"/>
+  <rect x="400" y="540" width="220" height="30" rx="10" fill="#f43f5e"/>
+  <rect x="400" y="560" width="220" height="10" fill="#f43f5e"/>
+  <text x="510" y="561" fill="white" font-size="14" font-weight="bold" text-anchor="middle">reviews</text>
+  <text x="416" y="593" fill="#fbbf24" font-size="12">id</text>
+  <text x="600" y="593" fill="#94a3b8" font-size="10">PK</text>
+  <text x="416" y="613" fill="#f87171" font-size="12">product_id · customer_id</text>
+  <text x="416" y="633" fill="#cbd5e1" font-size="12">rating · comment</text>
+
+  <!-- relation lines -->
+  <!-- categories 1 -> N products -->
+  <path d="M 260 145 C 320 145, 340 145, 400 145"
+        stroke="#64748b" stroke-width="1.5" fill="none"/>
+  <text x="290" y="135" fill="#94a3b8" font-size="11">1</text>
+  <text x="380" y="135" fill="#94a3b8" font-size="11">N</text>
+
+  <!-- customers 1 -> N orders -->
+  <path d="M 260 365 C 320 365, 340 365, 400 365"
+        stroke="#64748b" stroke-width="1.5" fill="none"/>
+  <text x="290" y="355" fill="#94a3b8" font-size="11">1</text>
+  <text x="380" y="355" fill="#94a3b8" font-size="11">N</text>
+
+  <!-- orders 1 -> N order_items -->
+  <path d="M 620 365 C 660 365, 680 365, 740 365"
+        stroke="#64748b" stroke-width="1.5" fill="none"/>
+  <text x="640" y="355" fill="#94a3b8" font-size="11">1</text>
+  <text x="720" y="355" fill="#94a3b8" font-size="11">N</text>
+
+  <!-- products 1 -> N order_items (curved below) -->
+  <path d="M 620 200 C 700 200, 850 200, 850 300"
+        stroke="#64748b" stroke-width="1.5" fill="none" stroke-dasharray="4 3"/>
+  <text x="700" y="192" fill="#94a3b8" font-size="11">1</text>
+  <text x="858" y="270" fill="#94a3b8" font-size="11">N</text>
+
+  <!-- products 1 -> N reviews -->
+  <path d="M 510 225 C 510 300, 510 480, 510 540"
+        stroke="#64748b" stroke-width="1.5" fill="none" stroke-dasharray="4 3"/>
+  <text x="518" y="240" fill="#94a3b8" font-size="11">1</text>
+  <text x="518" y="520" fill="#94a3b8" font-size="11">N</text>
+
+  <!-- customers 1 -> N reviews -->
+  <path d="M 160 430 C 160 480, 200 600, 400 600"
+        stroke="#64748b" stroke-width="1.5" fill="none" stroke-dasharray="4 3"/>
+  <text x="168" y="445" fill="#94a3b8" font-size="11">1</text>
+  <text x="360" y="592" fill="#94a3b8" font-size="11">N</text>
+
+  <!-- legend -->
+  <rect x="60" y="510" width="240" height="150" rx="8" fill="#0f172a" stroke="#334155"/>
+  <text x="80" y="538" fill="#f1f5f9" font-size="13" font-weight="bold">LEGEND</text>
+  <text x="80" y="565" fill="#fbbf24" font-size="12">PK</text>
+  <text x="115" y="565" fill="#cbd5e1" font-size="12">primary key</text>
+  <text x="80" y="590" fill="#f87171" font-size="12">FK</text>
+  <text x="115" y="590" fill="#cbd5e1" font-size="12">foreign key (logical)</text>
+  <line x1="80" y1="615" x2="120" y2="615" stroke="#64748b" stroke-width="1.5"/>
+  <text x="130" y="619" fill="#cbd5e1" font-size="12">direct relation</text>
+  <line x1="80" y1="640" x2="120" y2="640" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="130" y="644" fill="#cbd5e1" font-size="12">indirect / secondary</text>
+</svg>

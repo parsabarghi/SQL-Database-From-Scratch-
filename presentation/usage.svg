@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" font-family="Menlo, Consolas, monospace">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+    <marker id="arrow3" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="620" fill="url(#bg3)"/>
+
+  <text x="500" y="45" fill="#f1f5f9" font-size="24" font-weight="bold" text-anchor="middle">
+    How to Use PyDB
+  </text>
+  <text x="500" y="72" fill="#94a3b8" font-size="13" text-anchor="middle">
+    From terminal to running database in three steps
+  </text>
+
+  <!-- Step 1 -->
+  <rect x="60" y="110" width="280" height="200" rx="12" fill="#1e293b" stroke="#3b82f6" stroke-width="2" filter="url(#glow)"/>
+  <circle cx="95" cy="140" r="18" fill="#3b82f6"/>
+  <text x="95" y="146" fill="white" font-size="18" font-weight="bold" text-anchor="middle">1</text>
+  <text x="125" y="146" fill="#60a5fa" font-size="16" font-weight="bold">Launch the CLI</text>
+
+  <rect x="80" y="170" width="240" height="40" rx="6" fill="#0f172a"/>
+  <text x="90" y="195" fill="#86efac" font-size="11">$ python -m pydb.cli ./mydb</text>
+
+  <text x="80" y="240" fill="#cbd5e1" font-size="12">Opens a REPL at</text>
+  <text x="80" y="258" fill="#cbd5e1" font-size="12">the folder you give it.</text>
+  <text x="80" y="285" fill="#94a3b8" font-size="11" font-style="italic">Creates the folder if missing.</text>
+
+  <line x1="340" y1="210" x2="380" y2="210" stroke="#64748b" stroke-width="2" marker-end="url(#arrow3)"/>
+
+  <!-- Step 2 -->
+  <rect x="385" y="110" width="280" height="200" rx="12" fill="#1e293b" stroke="#a855f7" stroke-width="2" filter="url(#glow)"/>
+  <circle cx="420" cy="140" r="18" fill="#a855f7"/>
+  <text x="420" y="146" fill="white" font-size="18" font-weight="bold" text-anchor="middle">2</text>
+  <text x="450" y="146" fill="#c084fc" font-size="16" font-weight="bold">Type SQL</text>
+
+  <rect x="405" y="170" width="240" height="40" rx="6" fill="#0f172a"/>
+  <text x="415" y="195" fill="#fbbf24" font-size="11">pydb&gt; CREATE TABLE ...;</text>
+
+  <text x="405" y="240" fill="#cbd5e1" font-size="12">Statements end with</text>
+  <text x="405" y="258" fill="#cbd5e1" font-size="12">a semicolon — the shell</text>
+  <text x="405" y="276" fill="#cbd5e1" font-size="12">buffers until it sees one.</text>
+  <text x="405" y="300" fill="#94a3b8" font-size="11" font-style="italic">Multi-line SQL is fine.</text>
+
+  <line x1="665" y1="210" x2="705" y2="210" stroke="#64748b" stroke-width="2" marker-end="url(#arrow3)"/>
+
+  <!-- Step 3 -->
+  <rect x="710" y="110" width="230" height="200" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="2" filter="url(#glow)"/>
+  <circle cx="745" cy="140" r="18" fill="#10b981"/>
+  <text x="745" y="146" fill="white" font-size="18" font-weight="bold" text-anchor="middle">3</text>
+  <text x="775" y="146" fill="#34d399" font-size="16" font-weight="bold">See results</text>
+
+  <rect x="725" y="170" width="200" height="55" rx="6" fill="#0f172a"/>
+  <text x="735" y="188" fill="#86efac" font-size="10">id | name  | age</text>
+  <text x="735" y="201" fill="#86efac" font-size="10">---+-------+----</text>
+  <text x="735" y="214" fill="#86efac" font-size="10">1  | Alice | 30</text>
+
+  <text x="725" y="255" fill="#cbd5e1" font-size="12">Pretty tables,</text>
+  <text x="725" y="273" fill="#cbd5e1" font-size="12">or clean errors.</text>
+  <text x="725" y="297" fill="#94a3b8" font-size="11" font-style="italic">Data is on disk.</text>
+
+  <!-- Divider -->
+  <line x1="60" y1="350" x2="940" y2="350" stroke="#334155" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- Cheat sheet -->
+  <text x="500" y="385" fill="#f1f5f9" font-size="16" font-weight="bold" text-anchor="middle">
+    CLI command cheat sheet
+  </text>
+
+  <!-- Left column -->
+  <text x="80" y="425" fill="#60a5fa" font-size="13" font-weight="bold">META-COMMANDS</text>
+
+  <text x="80" y="452" fill="#fbbf24" font-size="13">\h</text>
+  <text x="130" y="452" fill="#cbd5e1" font-size="13">show help</text>
+
+  <text x="80" y="477" fill="#fbbf24" font-size="13">\t</text>
+  <text x="130" y="477" fill="#cbd5e1" font-size="13">list all tables</text>
+
+  <text x="80" y="502" fill="#fbbf24" font-size="13">\d products</text>
+  <text x="200" y="502" fill="#cbd5e1" font-size="13">describe a table</text>
+
+  <text x="80" y="527" fill="#fbbf24" font-size="13">\drop products</text>
+  <text x="215" y="527" fill="#cbd5e1" font-size="13">drop a table</text>
+
+  <text x="80" y="552" fill="#fbbf24" font-size="13">\reset</text>
+  <text x="150" y="552" fill="#cbd5e1" font-size="13">wipe the database</text>
+
+  <text x="80" y="577" fill="#fbbf24" font-size="13">\q</text>
+  <text x="130" y="577" fill="#cbd5e1" font-size="13">quit (flushes to disk)</text>
+
+  <!-- Right column -->
+  <text x="560" y="425" fill="#34d399" font-size="13" font-weight="bold">SQL STATEMENTS</text>
+
+  <text x="560" y="452" fill="#cbd5e1" font-size="12">CREATE TABLE name (...);</text>
+  <text x="560" y="477" fill="#cbd5e1" font-size="12">INSERT INTO name VALUES (...);</text>
+  <text x="560" y="502" fill="#cbd5e1" font-size="12">SELECT * FROM name WHERE ...;</text>
+  <text x="560" y="527" fill="#cbd5e1" font-size="12">UPDATE name SET col = ... WHERE ...;</text>
+  <text x="560" y="552" fill="#cbd5e1" font-size="12">DELETE FROM name WHERE ...;</text>
+  <text x="560" y="577" fill="#cbd5e1" font-size="12">DROP TABLE name;</text>
+
+</svg>
